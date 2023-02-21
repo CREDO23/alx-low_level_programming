@@ -14,9 +14,9 @@ int main(void)
 	printf("%d, %d, ", 1, 2);
 	for (i = 3; i < 50; i++)
 	{	if (i != 50)
-			printf("%u, ", z);
+			printf("%d, ", z);
 		else
-			printf("%u", z);
+			printf("%d", z);
 		x = y;
 		y = z;
 		z = x + y;
