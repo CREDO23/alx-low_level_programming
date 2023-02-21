@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 /**
  * print_last_digit - Entry point
  * @x: The number we will retrieve the last digit
@@ -7,5 +8,9 @@
  */
 int print_last_digit(int x)
 {
-	return (abs((x % 10)));
+	int n;
+
+	n = abs(x % 10);
+	_putchar(n);
+	return (n);
 }
