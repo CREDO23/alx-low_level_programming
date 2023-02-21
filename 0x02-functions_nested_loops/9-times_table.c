@@ -16,13 +16,12 @@ void times_table(void)
 				if (i * j < 10)
 					printf("%d, ", i * j);
 				else	
-					print("%d,  ", i * j);
+					printf("%d,  ", i * j);
 			else	
 				if (i * j < 10)
 					printf("%d, ", i * j);
 				else		
-					print("%d,  ", i * j);
-			else	
+					printf("%d,  ", i * j);
 		}
 		printf("\n");
 	}
