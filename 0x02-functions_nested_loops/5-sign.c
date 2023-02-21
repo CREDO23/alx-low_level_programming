@@ -2,17 +2,17 @@
 
 /**
  * print_sign - Entry point
- * @c: The number to be checked
+ * @n: The number to be checked
  * Return: 1 if n is greater than 0, -1 if n is less than 0 otherwise 0
  */
-int print_sign(int c)
+int print_sign(int n)
 {
-	if (c > 0)
+	if (n > 0)
 	{
 		printf("%d\n", '+');
 		return (1);
 	}
-	else if (c < 0)
+	else if (n < 0)
 	{
 		printf("%d\n", '-');
 		return (-1);
