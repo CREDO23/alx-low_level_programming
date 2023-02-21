@@ -13,7 +13,7 @@ void jack_bauer(void)
 			for (j = 0; j < 6; j++)
 			{
 				for (k = 0; k < 10; k++)
-				{	
+				{
 					if (i < 10)
 						printf("0%d:%d%d\n", i, j, k);
 					else
