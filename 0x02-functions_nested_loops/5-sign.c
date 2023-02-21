@@ -9,17 +9,17 @@ int print_sign(int c)
 {
 	if (c > 0)
 	{
-		printf("%s\n", '+');
+		printf("%d\n", '+');
 		return (1);
 	}
 	else if (c < 0)
 	{
-		printf("%s\n", '-');
+		printf("%d\n", '-');
 		return (-1);
 	}
 	else
 	{
-		printf("%s\n", '0');
+		printf("%d\n", '0');
 		return (0);
 	}
 }
