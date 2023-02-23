@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <ctype.c>
 
 /**
  * _isdigit - The function to test the digit
