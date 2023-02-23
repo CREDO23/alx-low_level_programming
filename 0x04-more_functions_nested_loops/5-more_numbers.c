@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * more_numbers - Funtion to print
@@ -6,11 +6,11 @@
  */
 void more_numbers(void)
 {
-	int i, j;
+	char i, j;
 
-	for (i = 0; i < 10; i++)
+	for (i = '0'; i < '10'; i++)
 	{
-		for (j = 0; j < 15; j++)
+		for (j = '0'; j < '15'; j++)
 		{
 			_putchar(j);
 		}
