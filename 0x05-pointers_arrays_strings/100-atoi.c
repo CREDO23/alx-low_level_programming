@@ -7,53 +7,20 @@
  */
 int _atoi(char *s)
 {
-	int prev = 0;
-	int next = 1;
-	int i;
-	int signindex;
-	int res = 0;
+	int sign = 1;
+	unsigned int num = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		if (s[i] > '9' || s[i] < '0')
-		{
-			if (res != 0)
-			{
-				next++;
-			}
-			continue;
-		}
-		else
-		{
-			if (next - prev == 1)
-			{
-				if (res == 0)
-				{
-					signindex = i - 1;
-				}
-				res = res * 10 + s[i] - '0';
-				prev = i;
-				next = i + 1;
-			}
-			else{
-				return (res);
-			}
-		}
-	}
+	do {
 
-	while (s[signindex] == 45 || s[signindex] == 32 || s[signindex] == 9 || s[signindex] == 8 || s[signindex] == 43 || s[signindex] == 11 || signindex >= 0)
-	{
-		if (s[signindex] == 45)
-		{
-			res = -(res);
-		}
-		if (s[signindex] != 45 || s[signindex] != 43)
-		{
-			signindex--;
-			continue;
-		}
-		signindex--;
-	}
+		if (*s == '-')
+			sign *= -1;
 
-	return (res);
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
+
+		else if (num > 0)
+			break;
+	} while (*s++);
+
+	return (num * sign);
 }
