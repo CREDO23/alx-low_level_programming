@@ -18,7 +18,7 @@ int _atoi(char *s)
 		if (s[i] > '9' || s[i] < '0')
 		{
 			if (res != 0)
-				prev++;
+				next++;
 			continue;
 		}
 		else
