@@ -36,7 +36,7 @@ int _atoi(char *s)
 		}
 	}
 
-	while (s[signindex] == 45 || s[signindex] == 43 || s[signindex] == 11 || s[signindex] == 8 || s[signindex] == 9 || s[signindex] == 32 || s[signindex] >= s[0])
+	while (s[signindex] == 45 || s[signindex] == 43 || s[signindex] == 11 || s[signindex] == 8 || s[signindex] == 9 || s[signindex] == 32 || signindex >= 0)
 	{
 		if (s[signindex] == 45)
 		{
