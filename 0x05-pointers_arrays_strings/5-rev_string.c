@@ -5,7 +5,7 @@
  * @str: String to reverse
  * Return: Nothing
  */
-void rev_string(char str[])
+void rev_string(char *str)
 {
 	int i = 0;
 
