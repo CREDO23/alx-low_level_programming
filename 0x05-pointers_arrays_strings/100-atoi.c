@@ -26,13 +26,16 @@ int _atoi(char *s)
 			if (next - prev == 1)
 			{
 				if (res == 0)
+				{
 					signindex = i - 1;
+				}
 				res = res * 10 + s[i] - '0';
 				prev = i;
 				next = i + 1;
 			}
-			else
+			else{
 				return (res);
+			}
 		}
 	}
 
