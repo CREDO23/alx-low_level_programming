@@ -40,9 +40,9 @@ int _atoi(char *s)
 	{
 		if (s[signindex] == 45)
 			res = -(res);
-		else
+		if (s[signindex] != 45 || s[signindex] != 43)
 			signindex--;
-		continue;
+			continue;
 		signindex++;
 	}
 
