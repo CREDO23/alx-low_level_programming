@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * _put - The funtion to put a strint in stdout
+ * _puts - The funtion to put a strint in stdout
  * @s: The string
  * Return: Nothing
  */
 void _puts(char *str)
 {
-	int i;
+	int i = 0;
 
 	while (str[i] != '\0')
 	{
