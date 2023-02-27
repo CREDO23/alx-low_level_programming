@@ -18,7 +18,9 @@ int _atoi(char *s)
 		if (s[i] > '9' || s[i] < '0')
 		{
 			if (res != 0)
+			{
 				next++;
+			}
 			continue;
 		}
 		else
@@ -50,7 +52,7 @@ int _atoi(char *s)
 			signindex--;
 			continue;
 		}
-		signindex++;
+		signindex--;
 	}
 
 	return (res);
