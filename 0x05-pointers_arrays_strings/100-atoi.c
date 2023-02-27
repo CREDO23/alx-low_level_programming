@@ -13,7 +13,7 @@ int _atoi(char *s)
 	int signindex;
 	int res = 0;
 
-	for (i = 0; s[i] != '\0' || s[i] != '\n' || s[i]; ++i)
+	for (i = 0; s[i] != '\0'; ++i)
 	{
 		if (s[i] > '9' || s[i] < '0')
 		{
@@ -36,7 +36,7 @@ int _atoi(char *s)
 		}
 	}
 
-	while (s[signindex] == 45 || s[signindex] == 43 || s[signindex] == 11 || s[signindex] == 8 || s[signindex] == 9 || s[signindex] == 32)
+	while (s[signindex] == 45 || s[signindex] == 43 || s[signindex] == 11 || s[signindex] == 8 || s[signindex] == 9 || s[signindex] == 32 || s[signindex] >= s[0])
 	{
 		if (s[signindex] == 45)
 			res = -res;
