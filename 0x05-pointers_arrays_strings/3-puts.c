@@ -2,7 +2,7 @@
 
 /**
  * _puts - The funtion to put a strint in stdout
- * @s: The string
+ * @str: The string
  * Return: Nothing
  */
 void _puts(char *str)
