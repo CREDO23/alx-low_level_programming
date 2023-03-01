@@ -1,4 +1,4 @@
-#include "man.h"
+#include "main.h"
 
 /**
  * *_strncpy- The function to copy
