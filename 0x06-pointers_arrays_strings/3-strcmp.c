@@ -1,9 +1,10 @@
-#include "main"
+#include "main.h"
 
 /**
- * _strcmp - The function to compare
+ * _strcmp - The fn
  * @s1: The 1 string
  * @s2: The 2 string
+ * Return: The diff
  */
 int _strcmp(char *s1, char *s2)
 {
