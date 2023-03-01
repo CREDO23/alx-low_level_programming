@@ -7,16 +7,16 @@
  * @n: The lenth
  * Return: The concatended string
  */
-char *_strcat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
-	int i, j;
+	int i = 0;
 	int lnd = 0;
 
 	while (dest[i++])
 	{
 		lnd++;
 	}
-	for (j = 0; src[j] && i < n; j++)
+	for (i = 0; src[i] && i < n; i++)
 	{
 	dest[lnd++] = src[i];
 	}
