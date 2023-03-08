@@ -4,6 +4,7 @@
  * _sqrt - The funtion that helps us to find the square of a number
  * @sqr: THe square
  * @n: THe number
+ * Return: The square
  */
 unsigned int _sqrt(int sqr, int n)
 {
