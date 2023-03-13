@@ -3,7 +3,7 @@
 /**
  * **alloc_grid - THe funtion
  * @width: The larger
- * @heigth: The heigth
+ * @height: The heigth
  * Return: An array
  */
 int **alloc_grid(int width, int height)
