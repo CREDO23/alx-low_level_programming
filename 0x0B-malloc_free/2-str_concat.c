@@ -11,13 +11,13 @@ char *str_concat(char *s1, char *s2)
 	int i, j, ln = 0;
 	char *cnct;
 
-	if (s1 != NULL)
+	if (s1[0])
 	{
 		for (i = 0; s1[i]; i++)
 			ln++;
 	}
 
-	if (s2 != NULL)
+	if (s2[0])
 	{
 		for (i = 0; s2[i]; i++)
 			ln++;
@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (cnct == NULL)
 		return (NULL);
-	if (s1 != NULL)
+	if (s1[0])
 	{
 	for (i = 0; s1[i]; i++)
 	{
@@ -36,7 +36,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	}
 
-	if (s2 != NULL)
+	if (s2[0])
 	{
 	for (i = 0; s2[i]; i++)
 		cnct[j++] = s2[i];
