@@ -23,19 +23,24 @@ char *str_concat(char *s1, char *s2)
 			ln++;
 	}
 
-	cnct = malloc(sizeof(char) * ln);
+	cnct = malloc((sizeof(char) * ln) + 1);
 
 	if (cnct == NULL)
 		return (NULL);
-
+	if (s1 != NULL)
+	{
 	for (i = 0; s1[i]; i++)
 	{
 		cnct[i] = s1[i];
 		j = i;
 	}
+	}
 
+	if (s2 != NULL)
+	{
 	for (i = 0; s2[i]; i++)
 		cnct[j++] = s2[i];
+	}
 
 	cnct[ln] = '\0';
 
