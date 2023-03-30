@@ -8,16 +8,13 @@
  */
 size_t print_list(const list_t *h)
 {
-	const list_t *head;
 	unsigned int nb_nodes = 0;
 
-	head = h;
-
-	while (head)
+	while (h)
 	{
-		if (head->str)
+		if (h->str)
 		{
-			printf("[%d] %s\n", head->len, head->str);
+			printf("[%d] %s\n", h->len, h->str);
 		}
 		else
 		{
@@ -25,7 +22,7 @@ size_t print_list(const list_t *h)
 		}
 		nb_nodes++;
 
-		head = head->next;
+		h = h->next;
 	}
 	return (nb_nodes);
 }
