@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_listint - The function to print 
+ * print_listint - The function to print
  * @h: THe head of the ll
  *
  * Return: The length of the ll
