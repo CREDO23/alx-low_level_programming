@@ -37,7 +37,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	if (index == idx)
 		tmpl->next = new;
-	else
+	else if (index < idx)
 		return (NULL);
 
 	return (new);
