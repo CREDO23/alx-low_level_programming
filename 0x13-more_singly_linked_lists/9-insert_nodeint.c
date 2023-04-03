@@ -37,7 +37,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		tmpl = tmpl->next;
 	}
 
-	if (index < idx)
+	if (index < idx - 1)
 		return (NULL);
 
 	return (new);
