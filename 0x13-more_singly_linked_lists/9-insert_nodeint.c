@@ -24,20 +24,20 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	while (tmpl)
 	{
-		if (index == idx + 1)
+		if (index == idx - 1)
 		{
 			tmpr = tmpl->next;
 			tmpl->next = new;
 			new->next = tmpr;
+
+			index++;
 		}
 
 		index++;
 		tmpl = tmpl->next;
 	}
 
-	if (index == idx)
-		tmpl->next = new;
-	else if (index < idx)
+	if (index < idx)
 		return (NULL);
 
 	return (new);
