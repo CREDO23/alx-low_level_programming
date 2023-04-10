@@ -1,6 +1,7 @@
 #include "main.h"
 
 void close_file(int fd);
+char *create_buff(char *filename);
 
 /**
  * close_file - The function to close a file
@@ -20,15 +21,38 @@ void close_file(int fd)
 }
 
 /**
+ * create_buff - Allocates 1024 bytes for a buffer.
+ * @filename: The filename the buffer store for.
+ *
+ * Return: A pointer to the buffer.
+ */
+char *create_buff(char *filename)
+{
+	char *buffer;
+
+	buffer = malloc(sizeof(char) * 1024);
+
+	if (buffer == NULL)
+	{
+		dprintf(STDERR_FILENO,
+			"Error: Can't write to %s\n", filename);
+		exit(99);
+	}
+
+	return (buffer);
+}
+
+/**
  * main - Entry point
  * @argc: The number of arguments
  * @argv: The arguments values
  *
  * Return: Nothing
  */
-void main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	int fdo1, fdo2, rbytes1, wbytes2, cl1, cl2;
+	int fdo1, fdo2, rbytes1;
+	char *buffer;
 
 	if (argc < 3)
 	{
@@ -36,17 +60,14 @@ void main(int argc, char **argv)
 		exit(97);
 	}
 
+	buffer = create_buff(argv[1]);
+
 	fdo1 = open(argv[1], O_RDONLY);
 	if (!fdo1 || fdo1 == -1)
 	{
 		dprintf(STDERR_FILENO, "%s %s\n", "Error: Can't read from file", argv[1]);
 		exit(98);
 	}
-
-	char *buffer = malloc(sizeof(char) * 1024);
-
-	if (buffer == NULL)
-		exit(-1);
 
 	rbytes1 = read(fdo1, buffer, 1024);
 
@@ -58,7 +79,7 @@ void main(int argc, char **argv)
 	exit(99);
 	}
 
-	wbytes2 = write(fdo2, buffer, rbytes1);
+	write(fdo2, buffer, rbytes1);
 
 	close_file(fdo1);
 	close_file(fdo2);
