@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 	fdo2 = open(argv[2], O_CREAT | O_RDWR | O_TRUNC, 0664);
 
 	do {
-		if (fdo1 == -1 || rbytes == -1)
+		if (!fdo1 || fdo1 == -1 || rbytes == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]);
