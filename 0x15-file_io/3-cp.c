@@ -54,7 +54,7 @@ int main(int argc, char **argv)
 	int fdo1, fdo2, rbytes, wbytes;
 	char *buffer;
 
-	if (argc < 3)
+	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
