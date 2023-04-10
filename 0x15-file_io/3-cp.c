@@ -1,5 +1,7 @@
 #include "main.h"
 
+void close_file(int fd);
+
 /**
  * close_file - The function to close a file
  * @fd: The file descriptor
