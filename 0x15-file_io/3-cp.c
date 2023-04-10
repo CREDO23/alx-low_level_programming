@@ -92,5 +92,5 @@ int main(int argc, char **argv)
 	close_file(fdo2);
 	free(buffer);
 
-	exit(0);
+	return (0);
 }
